@@ -1,3 +1,4 @@
+# Basic Queries
 CREATE TABLE "Students" (
 	"Id"	INTEGER NOT NULL,
 	"Name"	TEXT NOT NULL UNIQUE,
@@ -30,7 +31,7 @@ VALUES(6 , "Tony" , 25 , "male" , 70);
 UPDATE Students SET points = Points + 10 WHERE id = 1;
 UPDATE Students SET points = Points - 10 WHERE id = 2;
 
-
+# Creating table 
 CREATE TABLE "Graduates" (
 	"Id"	INTEGER NOT NULL,
 	"Name"	TEXT NOT NULL UNIQUE,
@@ -50,3 +51,12 @@ VALUES ("08/09/2018");
 UPDATE Graduates SET Graduation = "08/09/2018" WHERE id=5;
 DELETE FROM Students
 WHERE id = 5;
+
+
+# joins
+SELECT empley.name, e.company, date
+FROM employees as e JOIN companies as c on e.company = c.name;
+SELECT * from companies
+where (date < 2000);
+SELECT * from employees
+where (Role = "Graphic Designer");
