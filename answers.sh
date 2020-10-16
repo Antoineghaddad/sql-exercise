@@ -60,3 +60,14 @@ SELECT * from companies
 where (date < 2000);
 SELECT * from employees
 where (Role = "Graphic Designer");
+
+
+
+# count & filter 
+SELECT Name,max(Points) FROM myTable;
+SELECT avg(Points) FROM myTable;
+SELECT Name from Students
+WHERE (Points = 500);
+SELECT Name from myTable
+WHERE (Name = "%s%" and Name = "%S%");
+SELECT * FROM myTable ORDER BY Points DESC;
